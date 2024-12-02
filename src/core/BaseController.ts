@@ -14,7 +14,7 @@ export abstract class BaseController<T> {
 			const parsedPage = Number(page);
 			const parsedLimit = Number(limit);
 
-			const result = await this.service.getAll(parsedPage, parsedLimit, filters as Record<string, string>);
+			const result = await this.service.getAll(parsedPage, parsedLimit);
 
 			return c.json({
 				data: result.data,

@@ -10,7 +10,7 @@ export abstract class BaseController<T> {
 
 	async getAll(c: Context) {
 		try {
-			const { page = 1, limit = 10, ...filters } = c.req.query();
+			const { page = 1, limit = 10 } = c.req.query();
 			const parsedPage = Number(page);
 			const parsedLimit = Number(limit);
 
